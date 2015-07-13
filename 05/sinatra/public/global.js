@@ -13,6 +13,7 @@ var mark_as_done = function(event){
     thisLink.parentElement.classList.add("finished");
     // var child_to_remove = thisLink.parentNode.childNodes[1];
     // thisLink.parentNode.removeChild(child_to_remove);
+    
   });
   
   req.addEventListener("load", function(){
