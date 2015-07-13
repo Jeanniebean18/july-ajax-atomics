@@ -1,13 +1,15 @@
+<!-- // show both markdone and undo links. -->
+
 <ul>
   <% @tasks.each do |task| %>
-    <li class="task" id="task<%= task.id %>">
-      <%= task.content %>
-    
-      <% if !task.done %>
-        <a data-task-id="<%= task.id %>" href="/tasks/mark_as_done/<%= task.id %>" class="done_link">
-          Mark Done
-        </a>
-      <% end %>
-    </li>
+  <li class="task" id="task<%= task.id %>">
+    <%= task.content %>
+    <a data-task-id="<%= task.id %>" href="/tasks/mark_as_done/<%= task.id %>" class="done_link">
+      Mark Done
+    </a>
+    <a data-task-id="<%= task.id %>" href="/tasks/mark_as_undone/<%= task.id %>" class="undone_link">
+      | Undo
+    </a>
+  </li>
   <% end %>
 </ul>

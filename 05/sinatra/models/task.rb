@@ -22,4 +22,10 @@ class Task
     CONNECTION.execute("UPDATE tasks SET done = 1 WHERE id = #{self.id}")
     self.done = true
   end
+
+
+  def mark_as_undone
+    CONNECTION.execute("UPDATE tasks SET done = 0 WHERE id = #{self.id}")
+    self.done = false
+  end
 end
